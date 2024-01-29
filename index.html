@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+      
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6fcff;
+            color: #000000;
+            transition: background-color 0.5s;
+        }
+
+        header {
+            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AEYmBYT5JoVaogZK26giyP6_5UQTtQ9A7jt1Ef1hDq_gCBM8tmYCnXf9ChT7jUCTK2pAQR4cSVD2cRsjq5nrhY3bFAcctcLbIw=s1600'); 
+            background-size: cover;
+            background-position: center;
+            color: #fff; 
+            text-align: left;
+            padding: 12em;
+            position: relative;
+        }
+
+        h2 {
+            color: #000000 ;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            transition: color 0.3s;
+        }
+
+        p {
+            color: #000000 ;
+        }
+
+        h6 {
+            color: #ffffff ;
+            font-size: 1em;
+        }
+
+
+        a {
+            color: #e90000 ;
+        }
+
+        h3 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        h2:hover {
+            color: #000000;
+            border-bottom: 2px solid #e7e7e7;
+        }
+
+        .rounded-button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #e90000;
+            color: white;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .rounded-button:hover {
+            background-color: #ea5252 ;
+        }
+
+        section {
+            margin: 2em;
+            padding: 2em;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px #efefef00;
+        }
+
+        footer {
+            background-color: #e90000;
+            text-align: center;
+            padding: 0.1em;
+            font-size: 0.9em;
+        }
+
+
+        #images {
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            body {
+                font-size: 14px;
+            }
+
+            header {
+                font-size: 0.8em;
+            }
+
+            h3 {
+                font-size: 0.8em;
+            }
+
+            section {
+                margin: 1em;
+                padding: 1em;
+            }
+
+            .image-container img {
+                border-radius: 4px;
+            }
+        }
+
+    </style>
+ <script>
+    let currentIndex = 0;
+
+    function showImage(index) {
+        const imageContainer = document.querySelector('.image-container');
+        currentIndex = index;
+        const transformValue = -index * 100 + '%';
+        imageContainer.style.transform = 'translateX(' + transformValue + ')';
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % imageCount;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+        showImage(currentIndex);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        showImage(currentIndex);
+    });
+</script>
+    </script>
+    <title>Welcome to my webpage!</title>
+</head>
+
+<body>
+    <header>
+    </header>
+
+
+    <section id="about">
+        <h2>About Me :)</h2>
+        <p>Hello there! I'm <b>Sujal Dhar,</b> a spirited <b>9th</b> grader currently navigating the exciting academic journey at <b>Sri Sundarmal Modern School</b>, locally from <b>Sivasagar, Assam</b> Amidst the bustling halls and vibrant classrooms, I find my true calling in the realm of art. From the first stroke of the paintbrush to the meticulous details of sketching, art has become more than just a hobby for me—it's a passion that fuels my creativity and defines my identity.
+        </p>
+    </section>
+
+
+    <section id="images">
+        <h2>Art Gallery :)</h2>
+        <div class="image-container">
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSawk3JpwT8ZfQvH9cQWx2nlPMPc7vHmUg6Dxjh4B7yGUd_XXi-9tB76Q9myc2lFnzRuSGL5Yfr5qbuua6DeZmf4oup4w=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSawk3JpwT8ZfQvH9cQWx2nlPMPc7vHmUg6Dxjh4B7yGUd_XXi-9tB76Q9myc2lFnzRuSGL5Yfr5qbuua6DeZmf4oup4w=s1600" /> </a>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRyOzIMbVOvR7op_PXDtYrCXK5Dfit9jHsp6X4iEI8yn1i2bl9xsTj1FqslWJ5J3s4cElCqmd5GCzjf16AHzcDpLJ7MdA=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRyOzIMbVOvR7op_PXDtYrCXK5Dfit9jHsp6X4iEI8yn1i2bl9xsTj1FqslWJ5J3s4cElCqmd5GCzjf16AHzcDpLJ7MdA=s1600" /> </a>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTBgwLaOjLHhcPcEK1j3MxsxkWtxi-bhe7Qk7czTx6Esw39SWupWXKTaEJliKk6c6u5oImT_KHpC5XetuITAI_p50lewg=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTBgwLaOjLHhcPcEK1j3MxsxkWtxi-bhe7Qk7czTx6Esw39SWupWXKTaEJliKk6c6u5oImT_KHpC5XetuITAI_p50lewg=s1600" /> </a>
+        </div>
+    </section>
+
+    <section id="images2">
+        <h2>Art Gallery :)</h2>
+        <div class="image-container">
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYThNfoEl7iAZ2IRr0wccrcCTdh0YOGdITthCZ-g9M0Bi6AhOKtFCyTH6ppPVCruMzimkE6sjz2vt61DxR-vXQScb_Xq=s2560?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYThNfoEl7iAZ2IRr0wccrcCTdh0YOGdITthCZ-g9M0Bi6AhOKtFCyTH6ppPVCruMzimkE6sjz2vt61DxR-vXQScb_Xq=s2560" /> </a>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTWOxZtXjNRvVgJhx93KyknQcLUYWsyP8YaSYfKQXsIjKgGLVyCNWdVp9DAZqPIHJpusyoc-2Yh8vzCqmYtXm6QVRW1_A=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTWOxZtXjNRvVgJhx93KyknQcLUYWsyP8YaSYfKQXsIjKgGLVyCNWdVp9DAZqPIHJpusyoc-2Yh8vzCqmYtXm6QVRW1_A=s1600" /> </a>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTDR2WAaXdyP9Xbrs0ZeRW8m5wblGsQEfyuMAp2lqSrSK29AzOIbiQzPl0UFfWnRkkY-lP4pVNEU3zQahBHfyrcIxWSrA=s2560?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTDR2WAaXdyP9Xbrs0ZeRW8m5wblGsQEfyuMAp2lqSrSK29AzOIbiQzPl0UFfWnRkkY-lP4pVNEU3zQahBHfyrcIxWSrA=s2560" /> </a>
+        </div>
+    </section>
+
+    <section id="images3">
+        <h2>Art Gallery :)</h2>
+        <div class="image-container">
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQqVofFt096VvNoCCbynlxmfVfE8eTB2nj7UlqivMM0XkFL8SKdhqRt7AYV8J5neMO7LKBL3DyJ80OVBsVhT1flWCNi7g=s2560?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQqVofFt096VvNoCCbynlxmfVfE8eTB2nj7UlqivMM0XkFL8SKdhqRt7AYV8J5neMO7LKBL3DyJ80OVBsVhT1flWCNi7g=s2560" /> </a>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTiZZCfCpz9ayBa6spgdEK5vUIBVyScnGvs03aFAdVaS6YsukUzDydbC6fPqX_d-AOgHhiQJNqwB9PA73JUoNE9cbRiug=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTiZZCfCpz9ayBa6spgdEK5vUIBVyScnGvs03aFAdVaS6YsukUzDydbC6fPqX_d-AOgHhiQJNqwB9PA73JUoNE9cbRiug=s1600" /> </a>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSk4KC1KEenlrMwrLtCkKZWHdhG6VUrBhbIPtIxxHosaEJowGfJebaf-9_u5ctvBoJGVL_uvTV3BKp2JxFbfnkUx9g3HQ=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSk4KC1KEenlrMwrLtCkKZWHdhG6VUrBhbIPtIxxHosaEJowGfJebaf-9_u5ctvBoJGVL_uvTV3BKp2JxFbfnkUx9g3HQ=s1600" /> </a>
+    </section>
+
+    <section id="images4">
+        <h2>Art Gallery :)</h2>
+        <div class="image-container">
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTl6F8IjuPZcF8f2bS0iBGQG_tWOrd-SnKses4C-exljnsq3ppIExsGoq9NwLuawf2KWtArbUygntW6mwtlyo06ll4Dfg=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTl6F8IjuPZcF8f2bS0iBGQG_tWOrd-SnKses4C-exljnsq3ppIExsGoq9NwLuawf2KWtArbUygntW6mwtlyo06ll4Dfg=s1600" /> </a>
+            <a href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYR-gUExB6fYQvDIUZzBX7Szt5f3MMoIrmXFw8XRfQK1L5h5Rf74tQHRwVUe5wbLc5GhURzEFB4oVSIlxqWDeNCIkGWFJQ=s1600?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYR-gUExB6fYQvDIUZzBX7Szt5f3MMoIrmXFw8XRfQK1L5h5Rf74tQHRwVUe5wbLc5GhURzEFB4oVSIlxqWDeNCIkGWFJQ=s1600" /> </a>
+    </section>
+
+
+    <section id="prices">
+        <h2>Price Tags (Human Portrait)</h2>
+        <p>ArtWork (A5 Size): ₹300 INR</p>
+        <a href="https://wa.link/" class="rounded-button">Click to Order</a>
+        <p>ArtWork (A4 Size): ₹500 INR</p>
+        <a href="https://wa.link/" class="rounded-button">Click to Order</a>
+        <p>Portrait (Above 3 Persons, Family Portrait): ₹1000 INR</p>
+        <a href="https://wa.link/" class="rounded-button">Click to Order</a>
+    </section>
+
+    <section id="prices">
+        <h2>Price Tags (Anime & God)</h2>
+        <p>ArtWork (A5 Size): ₹250 INR</p>
+        <a href="https://wa.link/" class="rounded-button">Click to Order</a>
+        <p>ArtWork (A4 Size): ₹400 INR</p>
+        <a href="https://wa.link/" class="rounded-button">Click to Order</a>
+    </section>
+
+    <section id="conatct">
+        <h2>Contact Me</h2>
+          <p>YouTube</p><a href="https://www.youtube.com/@sdsayzz"><i class="fa-brands fa-youtube"></i></a>
+          <p>Instagram</p><a href="https://www.instagram.com/sujaldhar_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <p>E-Mail Me</p><a href="mailto:sujaldhar78@gmail.com"><i class="fas fa-envelope"></i></a>
+    </section>
+
+    <footer>
+        <h6>Thanks for visiting!<br>Coded in HTML & CSS by Tanmay Karmakar</h6>
+    </footer>
+
+</body>
+</html>
